@@ -90,7 +90,7 @@ public class OrderServices {
         //B.Change order status from "Accept" to "Completed"
         public Orter_table CompletedStatus(Integer id){
             Orter_table orterTable = orderRepositary.findOrter_tableByCustomerId(id);
-            if(orterTable != null && orterTable.getStatus().equals("ACCEPT")){
+            if(orterTable != null && orterTable.getStatus().equals("IN PROGRESS")){
                 orterTable.setStatus("COMPLETE");
                 orderRepositary.save(orterTable);
                 return orterTable;
